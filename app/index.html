@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>No Liability</title>
+    <link rel="icon" href="img/money.svg">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="fonts/font-awesome.css">
+</head>
+
+<body ng-app="myApp">
+    <nav>
+        <div class="tooltip">
+           <a href="index.html">
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+            <span class="tooltiptext">Accueil</span>
+            </a>
+        </div>
+        <div class="tooltip">
+           <a href="user.html">
+            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+            <span class="tooltiptext">Ajouter un user</span>
+            </a>
+        </div>
+        <div class="tooltip">
+           <a href="dette.html">
+            <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
+            <span class="tooltiptext">Ajouter une dette</span>
+            </a>
+        </div>
+
+
+    </nav>
+
+    <section class="section-index">
+        <img src="img/piggy-bank.svg" alt="">
+        <div class="separator"></div>
+        <h1>Welcome {{name}}</h1>
+        <h3>"Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis"</h3>
+        <ul>
+            <!--                <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                    <div>
+                        <h4>{{usergroup}} -</h4>
+                        <p>{{date}} + {{montant}}</p>
+                    </div>
+                    <div>
+                        <h4>payeur</h4>
+                        <p>{{concernes}} + {{nbConcernes}}</p>
+                    </div>
+                    <p class="description">{{description}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci odio similique, corporis libero natus id, maiores ipsa rerum cumque laboriosam a facere, placeat. Quas hic illo quis, ab expedita molestias.</p>
+                </li>-->
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+                <div>
+                    <h4>groupe -</h4>
+                    <small>octobre 2016 - 3000€</small>
+                </div>
+                <div>
+                    <h4>Ange</h4>
+                    <small>Julien, Lise - 2</small>
+                </div>
+                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>

@@ -1,40 +1,4 @@
-.fa-minus-square {
-    margin-top: 10px;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    font-size: 0.8em;
-    width: 150px;
-    background-color: $color-general;
-    color: $color-white;
-    text-align: center;
-    padding: 5px;
-    margin-left: 10px;
-    margin-top: 20px;
-    text-transform: uppercase;
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-.separator {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    border-top: 3px solid $color-orange-light;
-}
-
-.section-index {
+.section-user {
     display: inline-block;
     margin: 75px auto;
     width: 89.7%;
@@ -55,13 +19,6 @@
         width: 65%;
         text-transform: lowercase;
     }
-    h4 {
-        text-transform: uppercase;
-        padding-right: 5px;
-        margin-top: 3px;
-        font-size: 1em;
-        color: $color-red;
-    }
     img {
         display: block;
         width: 200px;
@@ -74,6 +31,7 @@
         margin: 50px auto;
         margin-bottom: 75px;
         overflow-y: scroll;
+        
         li {
             display: inline-block;
             color: $color-general;
@@ -82,14 +40,21 @@
             padding: 25px;
             list-style: none;
             background-color: $color-white-transparence;
-            border-bottom: 1px solid $color-orange-light;
             vertical-align: top;
+            /*text-align: center;*/
             &:hover {
                 transform: rotate(1deg);
                 box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
             }
+            h4 {
+                text-transform: uppercase;
+                padding-right: 5px;
+                margin-top: 3px;
+                font-size: 1em;
+                color: $color-white;
+            }
             small {
-                color: $color-general;
+                color: $color-white;
                 padding-top: 3px;
                 padding-bottom: 3px;
                 font-weight: bolder;
@@ -101,7 +66,7 @@
                 margin-bottom: 5px;
             }
             i {
-                color: $color-orange-light;
+                color: $color-white;
                 margin-bottom: 10px;
                 cursor: pointer;
                 &:hover {
@@ -110,38 +75,4 @@
             }
         }
     }
-}
-
-li > p {
-    color: $color-red;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.tax {
-    display: inline-block;
-    background-color: $color-green;
-    width: 100px;
-    margin-right: 20px;
-}
-
-.no-tax {
-    display: inline-block;
-    width: 100px;
-    background-color: $color-red;
-}
-
-.tax p,
-.no-tax p {
-    display: inline-block;
-    padding: 20px 5px 20px 20px;
-    text-align: center;
-    color: $color-white;
-    font-weight: bolder;
-}
-
-.tax i,
-.no-tax i {
-    color: $color-white !important;
-    cursor: default !important;
 }

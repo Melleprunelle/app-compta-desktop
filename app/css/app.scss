@@ -5,7 +5,7 @@ $color-pink: #FF967B;
 $color-orange-light: #FF5023;
 $color-red: #BB3B19;
 $color-white: ghostwhite;
-$color-white-transparence: rgba(255, 255, 255, 0.5); 
+$color-white-transparence: rgba(255, 255, 255, 0.5);
 $color-gold: #bfa100;
 $color-green: yellowgreen;
 
@@ -13,7 +13,6 @@ $color-green: yellowgreen;
 
 $color-general: #333;
 $color-secondaire: #444;
-
 @font-face {
     font-family: 'open_sansbold';
     src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff');
@@ -47,6 +46,70 @@ $color-secondaire: #444;
     include  
     ================================================== */
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "open_sansregular";
+    color: $color-general;
+    background-image: url(../img/symphony.png);
+}
+
+nav {
+    height: 1850px;
+    width: 10%;
+    background-color: $color-orange-light;
+    display: inline-block;
+    section {
+        margin-top: 50px;
+        margin-left: 60px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    i {
+        color: $color-white;
+        margin-top: 20px;
+        cursor: pointer;
+        &:hover {
+            color: $color-general;
+        }
+    }
+}
+
+input {
+    width: 32%;
+    margin-left: 15px;
+    display: inline-block;
+    border: 1px solid $color-red;
+    padding: 10px 10px 10px 15px;
+    text-transform: lowercase;
+    background-color: transparent;
+}
+
+button {
+    width: 32%;
+    display: inline-block;
+    border: none;
+    color: $color-white;
+    padding: 10px 10px 10px 15px;
+    text-transform: uppercase;
+    background-color: $color-red;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+    &:hover {
+        background-color: $color-orange-light;
+    }
+}
+
 @import "index.scss";
 @import "accueil.scss";
+@import "user.scss";
 @import "mediaquery.scss";

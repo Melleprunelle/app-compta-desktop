@@ -23,22 +23,6 @@
 /* ==================================================
     include  
     ================================================== */
-.section-index button {
-  color: ghostwhite;
-  background-color: #FF5023;
-  border: none;
-  height: 40px;
-  width: 150px;
-  margin: 10px;
-  text-transform: uppercase;
-  cursor: pointer; }
-  .section-index button:hover {
-    background-color: #333; }
-
-.bouton {
-  width: 345px;
-  margin: -25px auto; }
-
 * {
   margin: 0px;
   padding: 0px;
@@ -68,6 +52,45 @@ nav {
     cursor: pointer; }
     nav i:hover {
       color: #333; }
+
+input {
+  width: 32%;
+  margin-left: 15px;
+  display: inline-block;
+  border: 1px solid #BB3B19;
+  padding: 10px 10px 10px 15px;
+  text-transform: lowercase;
+  background-color: transparent; }
+
+button {
+  width: 32%;
+  display: inline-block;
+  border: none;
+  color: ghostwhite;
+  padding: 10px 10px 10px 15px;
+  text-transform: uppercase;
+  background-color: #BB3B19;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px; }
+  button:hover {
+    background-color: #FF5023; }
+
+.section-index button {
+  color: ghostwhite;
+  background-color: #FF5023;
+  border: none;
+  height: 40px;
+  width: 150px;
+  margin: 10px;
+  text-transform: uppercase;
+  cursor: pointer; }
+  .section-index button:hover {
+    background-color: #333; }
+
+.bouton {
+  width: 345px;
+  margin: -25px auto; }
 
 .fa-minus-square {
   margin-top: 10px; }
@@ -117,7 +140,7 @@ nav {
     margin-top: 20px;
     margin-bottom: 50px;
     font-family: "open_sanslight";
-    width: 575px;
+    width: 65%;
     text-transform: lowercase; }
   .section-index h4 {
     text-transform: uppercase;
@@ -194,6 +217,72 @@ li > p {
 .no-tax i {
   color: ghostwhite !important;
   cursor: default !important; }
+
+.section-user {
+  display: inline-block;
+  margin: 75px auto;
+  width: 89.7%;
+  height: 900px;
+  vertical-align: top; }
+  .section-user h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    text-transform: uppercase; }
+  .section-user h3 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: "open_sanslight";
+    width: 65%;
+    text-transform: lowercase; }
+  .section-user img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto; }
+  .section-user ul {
+    height: 600px;
+    width: 80%;
+    margin: 50px auto;
+    margin-bottom: 75px;
+    overflow-y: scroll; }
+    .section-user ul li {
+      display: inline-block;
+      color: #333;
+      width: 30%;
+      margin: 1.5%;
+      padding: 25px;
+      list-style: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      vertical-align: top;
+      /*text-align: center;*/ }
+      .section-user ul li:hover {
+        transform: rotate(1deg);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); }
+      .section-user ul li h4 {
+        text-transform: uppercase;
+        padding-right: 5px;
+        margin-top: 3px;
+        font-size: 1em;
+        color: ghostwhite; }
+      .section-user ul li small {
+        color: ghostwhite;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-weight: bolder;
+        font-size: 0.9em;
+        text-transform: lowercase; }
+      .section-user ul li div {
+        margin-top: 15px;
+        margin-bottom: 5px; }
+      .section-user ul li i {
+        color: ghostwhite;
+        margin-bottom: 10px;
+        cursor: pointer; }
+        .section-user ul li i:hover {
+          color: #333; }
 
 /* Smartphone */
 @media (max-width: 450px) {

@@ -7,36 +7,343 @@
     <link rel="icon" href="img/money.svg">
     <link rel="stylesheet" href="css/app.css">
     <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
     <link rel="stylesheet" href="fonts/font-awesome.css">
 </head>
 
-
 <body ng-app="myApp">
     <nav>
-        <div class="tooltip">
-           <a href="accueil.html">
-            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-            <span class="tooltiptext">Accueil</span>
-            </a>
-        </div>
-        <div class="tooltip">
-           <a href="user.html">
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-            <span class="tooltiptext">Gérer les utilisateurs</span>
-            </a>
-        </div>
-        <div class="tooltip">
-           <a href="dette.html">
-            <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
-            <span class="tooltiptext">Ajouter un gage</span>
-            </a>
-        </div>
-        <div class="tooltip">
-           <a href="dette.html">
-            <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-            <span class="tooltiptext">Déconnexion</span>
-            </a>
-        </div>
+        <section>
+            <div class="tooltip">
+                <a href="accueil.html">
+                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Accueil</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="user.html">
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Gérer les utilisateurs</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="dette.html">
+                    <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Ajouter un gage</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                <span class="tooltiptext">Déconnexion</span>
+            </div>
+        </section>
     </nav>
-    
+
+    <section class="section-user" ng-controller="userController">
+        <img src="img/piggy-bank.svg" alt="">
+        <div class="separator"></div>
+        <h1>Welcome {{name}}</h1>
+        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
+        <ul>
+            <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
+            <button type="submit">Ajouter un débiteur</button>
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.username}}</h4>
+                <small>{{user.usergroup}}</small>
+            </li>
+        </ul>
+
+
+        <ul>
+            <input type="text" placeholder="Rechercher un groupe" ng-model="groupe">
+            <button type="submit">Ajouter un groupe</button>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
+                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{user.usergroup}}</h4>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+                <small>{{user.username}}</small>
+            </li>
+        </ul>
+    </section>
 </body>
+
+</html>

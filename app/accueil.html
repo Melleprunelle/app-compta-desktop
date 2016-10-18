@@ -12,31 +12,31 @@
 
 <body ng-app="myApp">
     <nav>
-       <section>
-        <div class="tooltip">
-            <a href="accueil.html">
-                <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-                <span class="tooltiptext">Accueil</span>
-            </a>
-        </div>
-        <div class="tooltip">
-            <a href="user.html">
-                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                <span class="tooltiptext">Gérer les utilisateurs</span>
-            </a>
-        </div>
-        <div class="tooltip">
-            <a href="dette.html">
-                <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
-                <span class="tooltiptext">Ajouter un gage</span>
-            </a>
-        </div>
-        <div class="tooltip">
-            <a href="dette.html">
-                <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
-                <span class="tooltiptext">à propos</span>
-            </a>
-        </div>
+        <section>
+            <div class="tooltip">
+                <a href="accueil.html">
+                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Accueil</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="user.html">
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Gérer les utilisateurs</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="dette.html">
+                    <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Ajouter un gage</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="dette.html">
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Déconnexion</span>
+                </a>
+            </div>
         </section>
     </nav>
 
@@ -60,185 +60,59 @@
 
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>groupe -</h4>
-                    <small>octobre 2016 - 3000€</small>
-                </div>
-                <div>
-                    <h4>Ange</h4>
-                    <small>Julien, Lise - 2</small>
-                </div>
-                <p>Après consommation excessive de GHB et d'alcool, Ange ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
+                <h4>groupe</h4>
+                <small>octobre 2016 - 3000€</small>
+                <h4>user</h4>
+                <small>user1, user2 - 2</small>
+                <p>Après consommation excessive de GHB et d'alcool, user ne se souvient plus de sa dette, heureusement que les bons comptes font les bons amis !</p>
             </li>
         </ul>
 
@@ -258,14 +132,155 @@
 
             <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-
-                <div>
-                    <h4>USER -</h4>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
                 </div>
-                <div>
-                    <h4>Ange</h4>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
             </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
+            <li id="{{user.username}}" ng-repeat="user in users" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>USER</h4>
+                <div class="tax">
+                    <p>40€</p>
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+
+                <div class="no-tax">
+                    <p>145€</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </li>
+
 
         </ul>
     </section>

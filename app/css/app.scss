@@ -43,7 +43,9 @@ $color-secondaire: #444;
 
 
 /* ==================================================
-    INDEX  
+    include  
     ================================================== */
 
 @import "index.scss";
+@import "accueil.scss";
+@import "mediaquery.scss";

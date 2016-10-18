@@ -1,0 +1,24 @@
+/* Smartphone */
+
+@media (max-width: 450px) {
+    nav {
+        position: inherit;
+        height: 70px;
+        width: 100%;
+        background-color: $color-orange-light;
+        display: inline-block;
+    }
+    
+    nav {
+    i {
+        color: $color-white;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 25%;
+        &:hover {
+            color: $color-general;
+        }
+    }
+}
+
+}

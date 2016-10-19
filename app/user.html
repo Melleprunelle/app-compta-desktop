@@ -9,10 +9,13 @@
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
+
+
     <link rel="stylesheet" href="fonts/font-awesome.css">
 </head>
 
 <body ng-app="myApp">
+
     <nav>
         <section>
             <div class="tooltip">
@@ -40,82 +43,45 @@
         </section>
     </nav>
 
-    <section class="section-user" ng-controller="userController">
+    <section class="section-user">
         <img src="img/piggy-bank.svg" alt="">
         <div class="separator"></div>
         <h1>Welcome {{name}}</h1>
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
-        <ul>
+        <ul ng-controller="usersCtrl">
             <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
-            <button type="submit">Ajouter un débiteur</button>
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
+            <button type="submit" id="myBtn">Ajouter un débiteur</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
 
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
+                <!-- Modal content -->
+                <div class="modal-content" ng-controller="userFormController">
+                    <span class="close">×</span>
+                    <h4>Ajouter un débiteur</h4>
+                    <input type="text" placeholder="Nom" ng-model="user.username">
+                    <input type="text" placeholder="Groupe" ng-model="user.usergroup">
+                    <label for="select">Colors</label>
+                     <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
+                                    <option value='#0D3C76'>Bleu</option>
+                                    <option value='#FF780C'>Orange</option>
+                                    <option value='#860D2E'>Violet</option>
+                                    <option value='#30B420'>Vert</option>
+                                    <option value='#AD1621'>Rouge</option>
+                                </select>
+                    <button type="submit" ng-click="addUser(user)">Ajouter</button>
+                </div>
 
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
+            </div>
 
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
+            <li id="{{}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
-            </li>
-
-            <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.username}}</h4>
-                <small>{{user.usergroup}}</small>
+                <h4>{{users.username}}</h4>
+                <small>{{users.usergroup}}</small>
             </li>
         </ul>
 
 
-        <ul>
+        <!--  <ul>
             <input type="text" placeholder="Rechercher un groupe" ng-model="groupe">
             <button type="submit">Ajouter un groupe</button>
             <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
@@ -342,8 +308,10 @@
                 <small>{{user.username}}</small>
                 <small>{{user.username}}</small>
             </li>
-        </ul>
+        </ul>-->
     </section>
 </body>
+
+<script src="js/script.js"></script>
 
 </html>

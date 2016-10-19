@@ -50,35 +50,73 @@
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
         <ul ng-controller="usersCtrl">
             <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
-            <button type="submit" id="myBtn">Ajouter un débiteur</button>
+            <button type="submit" id="btnAddUsers">Ajouter un débiteur</button>
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
                 <div class="modal-content" ng-controller="userFormController">
-                    <span class="close">×</span>
+                    <span class="close" id="close1">×</span>
                     <h4>Ajouter un débiteur</h4>
                     <input type="text" placeholder="Nom" ng-model="user.username">
                     <input type="text" placeholder="Groupe" ng-model="user.usergroup">
-                    <label for="select">Colors</label>
-                     <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
-                                    <option value='#0D3C76'>Bleu</option>
-                                    <option value='#FF780C'>Orange</option>
-                                    <option value='#860D2E'>Violet</option>
-                                    <option value='#30B420'>Vert</option>
-                                    <option value='#AD1621'>Rouge</option>
-                                </select>
-                    <button type="submit" ng-click="addUser(user)">Ajouter</button>
+                    <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
+                        <option value="">Colors</option>
+                        <option value='#009AB2'>Bleu</option>
+                        <option value='#FF780C'>Orange</option>
+                        <option value='#B20026'>Violet</option>
+                        <option value='#02B250'>Vert</option>
+                        <option value='#222'>Noir</option>
+                    </select>
+                    <button id="submit" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
                 </div>
 
             </div>
 
-            <li id="{{}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
+            <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
                 <h4>{{users.username}}</h4>
-                <small>{{users.usergroup}}</small>
             </li>
         </ul>
+
+
+        <ul ng-controller="usersCtrl">
+            <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
+            <button type="submit" id="btnAddGroups">Ajouter un groupe</button>
+            <!-- The Modal -->
+            <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" ng-controller="userFormController">
+                    <span class="close" id="close2">×</span>
+                    <h4>Ajouter un groupe</h4>
+                    <input type="text" placeholder="Groupe" ng-model="user.usergroup">
+                    <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
+                        <option value="">Débiteurs</option>
+                        <option ng-repeat="users in usersData">{{users.username}}</option>
+                    </select>
+
+                    <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
+                        <option value="">Colors</option>
+                        <option value='#009AB2'>Bleu</option>
+                        <option value='#FF780C'>Orange</option>
+                        <option value='#B20026'>Violet</option>
+                        <option value='#02B250'>Vert</option>
+                        <option value='#222'>Noir</option>
+                    </select>
+                    <button id="submit2" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
+                </div>
+
+            </div>
+
+            <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{users.usergroup}}</h4>
+                <small>{{users.username}}</small>
+            </li>
+        </ul>
+
+
 
 
         <!--  <ul>

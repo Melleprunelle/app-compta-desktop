@@ -62,7 +62,7 @@ input {
   background-color: transparent; }
 
 button {
-  width: 32%;
+  width: 295px;
   border: none;
   color: ghostwhite;
   padding: 10px 10px 10px 15px;
@@ -90,6 +90,7 @@ button {
     display: block;
     margin: 10px auto;
     margin-bottom: 15px;
+    width: 295px;
     text-transform: lowercase; }
   .modal h4 {
     width: 50%;
@@ -100,10 +101,22 @@ button {
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 20px; }
+  .modal select {
+    text-transform: uppercase;
+    display: block;
+    width: 295px;
+    margin: 10px auto 20px auto;
+    border: 1px solid #BB3B19;
+    padding: 10px 10px 10px 15px;
+    text-transform: lowercase;
+    background-color: ghostwhite; }
+  .modal button {
+    display: block;
+    margin: 10px auto; }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-image: url(../img/symphony.png);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -311,16 +324,20 @@ li > p {
       .section-user ul li h4 {
         text-transform: uppercase;
         padding-right: 5px;
-        margin-top: 3px;
+        margin: 5px 0px 10px;
+        padding: 5px;
+        width: 100%;
         font-size: 1em;
-        color: ghostwhite; }
+        color: #333;
+        background-color: ghostwhite; }
       .section-user ul li small {
-        color: ghostwhite;
-        padding-top: 3px;
-        padding-bottom: 3px;
+        color: #333;
+        padding: 5px;
         font-weight: bolder;
         font-size: 0.9em;
-        text-transform: lowercase; }
+        background-color: ghostwhite;
+        text-transform: lowercase;
+        width: 75%; }
       .section-user ul li div {
         margin-top: 15px;
         margin-bottom: 5px; }

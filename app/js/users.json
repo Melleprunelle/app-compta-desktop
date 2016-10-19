@@ -4,73 +4,73 @@
          "Id":"67",
          "username":"Erwann",
          "usergroup":"Ete 2016",
-         "usercolor":"blue"
+         "usercolor":"#009AB2"
       },
       {
          "Id":"66",
          "username":"Eszter",
          "usergroup":"Ete 2016",
-         "usercolor":"blue"
+         "usercolor":"#009AB2"
       },
       {
          "Id":"82",
          "username":"Benj",
          "usergroup":"Ete 2016",
-         "usercolor":"red"
+         "usercolor":"#FF780C"
       },
       {
          "Id":"87",
          "username":"Momo",
          "usergroup":"Ete 2016",
-         "usercolor":"black"
+         "usercolor":"#333"
       },
       {
          "Id":"83",
          "username":"Aurele",
          "usergroup":"Ete 2016",
-         "usercolor":"red"
+         "usercolor":"#FF780C"
       },
       {
          "Id":"95",
          "username":"Marc",
          "usergroup":"Ete 2016",
-         "usercolor":"black"
+         "usercolor":"#333"
       },
       {
          "Id":"97",
          "username":"Jo",
          "usergroup":"Ete 2016",
-         "usercolor":"green"
+         "usercolor":"#02B250"
       },
       {
          "Id":"96",
          "username":"MP",
          "usergroup":"Ete 2016",
-         "usercolor":"black"
+         "usercolor":"#333"
       },
       {
          "Id":"103",
          "username":"Romy",
          "usergroup":"Ete 2016",
-         "usercolor":"white"
+         "usercolor":"#B20026"
       },
       {
          "Id":"101",
          "username":"Baka",
          "usergroup":"Ete 2016",
-         "usercolor":"red"
+         "usercolor":"#FF780C"
       },
       {
          "Id":"100",
          "username":"Bea",
          "usergroup":"Ete 2016",
-         "usercolor":"green"
+         "usercolor":"#02B250"
       },
       {
          "Id":"102",
          "username":"Coraline",
          "usergroup":"Ete 2016",
-         "usercolor":"red"
+         "usercolor":"#FF780C"
       }
    ]
 }

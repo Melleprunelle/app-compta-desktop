@@ -74,3 +74,12 @@ app.controller("userFormController", function ($scope) {
     };
 
 });
+
+/*app.controller("userSup", function ($scope) {
+    $scope.supUser = function (sup) {
+        var sup = angular.element('{{users.Id}}');
+        $scope.usersData.splice(sup);
+        $scope.usersData = {};
+    };
+
+});*/

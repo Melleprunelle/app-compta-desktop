@@ -50,17 +50,21 @@
             h4 {
                 text-transform: uppercase;
                 padding-right: 5px;
-                margin-top: 3px;
+                margin: 5px 0px 10px;
+                padding: 5px;
+                width: 100%;
                 font-size: 1em;
-                color: $color-white;
+                color: $color-general;
+                background-color: $color-white; 
             }
-            small {
-                color: $color-white;
-                padding-top: 3px;
-                padding-bottom: 3px;
+            small {    
+                color: $color-general;
+            padding: 5px;
                 font-weight: bolder;
                 font-size: 0.9em;
+                background-color: $color-white; 
                 text-transform: lowercase;
+                width: 75%;
             }
             div {
                 margin-top: 15px;

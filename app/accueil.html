@@ -45,8 +45,9 @@
         <div class="separator"></div>
         <h1>Welcome {{name}}</h1>
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
-        <input type="text" placeholder="Rechercher un résumé" ng-model="resum">
+        
         <ul>
+           <input type="text" placeholder="Rechercher un résumé" ng-model="resum">
             <li id="{{user.username}}" ng-repeat="resum in resums | filter:resum">
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
                 <h4>{{resum.usergroup}}</h4>

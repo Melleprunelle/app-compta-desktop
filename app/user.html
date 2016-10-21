@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>No Liability</title>
-    <link rel="icon" href="img/money.svg">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" href="img/money.svg" />
+    <link rel="stylesheet" href="css/app.css" />
+
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
+    <script src="js/jquery.js"></script>
 
-
-    <link rel="stylesheet" href="fonts/font-awesome.css">
+    <link rel="stylesheet" href="fonts/font-awesome.css" />
 </head>
 
 <body ng-app="myApp">
@@ -50,7 +51,7 @@
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
         <ul ng-controller="usersCtrl">
             <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
-            <button type="submit" id="btnAddUsers">Ajouter un débiteur</button>
+            <button id="btnAddUsers">Ajouter un débiteur</button>
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
@@ -60,7 +61,7 @@
                     <h4>Ajouter un débiteur</h4>
                     <input type="text" placeholder="Nom" ng-model="user.username">
                     <input type="text" placeholder="Groupe" ng-model="user.usergroup">
-                    <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
+                    <select name="usercolor" ng-model="user.usercolor">
                         <option value="">Colors</option>
                         <option value='#009AB2'>Bleu</option>
                         <option value='#FF780C'>Orange</option>
@@ -91,10 +92,24 @@
                     <span class="close" id="close2">×</span>
                     <h4>Ajouter un groupe</h4>
                     <input type="text" placeholder="Groupe" ng-model="user.usergroup">
-                    <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
-                        <option value="">Débiteurs</option>
-                        <option ng-repeat="users in usersData">{{users.username}}</option>
-                    </select>
+
+                    <dl class="dropdown">
+                        <dt>
+                        <a href="#">
+                          <span>Débiteurs</span>      
+                        </a>
+                        </dt>
+                        <dd>
+                            <div class="mutliSelect">
+                                <ul>
+                                    <li ng-repeat="users in usersData">
+                                        <p>{{users.username}}</p>
+                                        <input type="checkbox" value="{{users.username}}" ng-model="user.username"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
 
                     <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
                         <option value="">Colors</option>
@@ -115,238 +130,6 @@
                 <small>{{users.username}}</small>
             </li>
         </ul>
-
-
-
-
-        <!--  <ul>
-            <input type="text" placeholder="Rechercher un groupe" ng-model="groupe">
-            <button type="submit">Ajouter un groupe</button>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:groupe">
-                <li id="{{user.username}}" ng-repeat="user in users |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{user.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{user.usergroup}}</h4>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-                <small>{{user.username}}</small>
-            </li>
-        </ul>-->
     </section>
 </body>
 

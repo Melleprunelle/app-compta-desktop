@@ -1,7 +1,7 @@
 .section-user {
     display: inline-block;
     margin: 75px auto;
-    width: 89.7%;
+    width: 89.6%;
     height: 900px;
     vertical-align: top;
     h1 {
@@ -76,6 +76,50 @@
                 cursor: pointer;
                 &:hover {
                     color: $color-general;
+                }
+            }
+        }
+    }
+}
+
+.dropdown {
+ text-transform: uppercase;
+        display: block;
+        width: 295px;
+        margin: 10px auto 20px auto;
+        border: 1px solid $color-red;
+        padding: 10px 10px 10px 15px;
+        text-transform: lowercase;
+        background-color: $color-white;
+    
+    dd {
+        div {
+            ul {
+                width: 100% !important;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                li {
+                    width: 100%;
+                    background-color: transparent;
+                    display: block;
+                    background-color: red;
+                    border: 1px solid white;
+                    color: white;
+                    
+                    &:hover {
+                        transform: rotate(0deg);
+                    }
+                    
+                    p {
+/*
+                        display: inline-block;
+*/
+                        color: blue;
+                    }
+                    
+                    input {
+                        display: inline-block;
+                    }
                 }
             }
         }

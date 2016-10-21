@@ -2,17 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>No Liability</title>
-    <link rel="icon" href="img/money.svg">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" href="img/money.svg" />
+    <link rel="stylesheet" href="css/app.css" />
+
     <script src="js/angular.min.js"></script>
-    <link rel="stylesheet" href="fonts/font-awesome.css">
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <link rel="stylesheet" href="fonts/font-awesome.css" />
 </head>
 
-
 <body ng-app="myApp">
-   <nav>
+
+    <nav>
         <section>
             <div class="tooltip">
                 <a href="accueil.html">
@@ -33,10 +38,52 @@
                 </a>
             </div>
             <div class="tooltip">
-                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-                    <span class="tooltiptext">Déconnexion</span>
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                <span class="tooltiptext">Déconnexion</span>
             </div>
         </section>
     </nav>
-    
+
+    <section class="section-user">
+        <img src="img/piggy-bank.svg" alt="">
+        <div class="separator"></div>
+        <h1>Welcome {{name}}</h1>
+        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
+        <ul ng-controller="usersCtrl">
+            <input type="text" placeholder="Rechercher un débiteur">
+            <button id="btnAddUsers">Ajouter une créance</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" ng-controller="userFormController">
+                    <span class="close" id="close1">×</span>
+                    <h4>Ajouter un débiteur</h4>
+                    <input type="text" placeholder="le groupe concerné par la créance" ng-model="user.usergroup"  maxlength="50">
+                    <input type="text" placeholder="date de la créance" ng-model="user.Date"  maxlength="20">
+                    <input type="text" placeholder="la créance : ex 150 euros" ng-model="user.Montant" maxlength="15">
+                    <select name="usercolor" ng-model="user.usercolor">
+                        <option value="">Colors</option>
+                        <option value='#009AB2'>Bleu</option>
+                        <option value='#FF780C'>Orange</option>
+                        <option value='#B20026'>Violet</option>
+                        <option value='#02B250'>Vert</option>
+                        <option value='#222'>Noir</option>
+                    </select>
+                    <button id="submit" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
+                </div>
+
+            </div>
+
+            <li id="{{users.Id}}" ng-repeat="users in usersData | filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>{{users.usergroup}}</h4>
+                <small>{{users.Date}}</small>
+                <small>{{users.Montant}}</small>
+            </li>
+        </ul>
+    </section>
 </body>
+<script src="js/script.js"></script>
+
+</html>

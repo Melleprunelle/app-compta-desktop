@@ -93,6 +93,11 @@ input {
     background-color: transparent;
 }
 
+.button-accueil {
+    display: block;
+    margin-right: 20px;
+}
+
 button {
     width: 295px;
     border: none;
@@ -186,4 +191,5 @@ button {
 @import "index.scss";
 @import "accueil.scss";
 @import "user.scss";
+@import "dette.scss";
 @import "mediaquery.scss";

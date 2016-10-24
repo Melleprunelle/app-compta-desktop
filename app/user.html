@@ -48,7 +48,7 @@
         <img src="img/piggy-bank.svg" alt="">
         <div class="separator"></div>
         <h1>Welcome {{name}}</h1>
-        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
+        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos débiteurs et vos groupes.</h3>
         <ul ng-controller="usersCtrl">
             <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
             <button id="btnAddUsers">Ajouter un débiteur</button>
@@ -76,7 +76,7 @@
 
             <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{users.username}}</h4>
+                <h4><i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</h4>
             </li>
         </ul>
 
@@ -104,7 +104,7 @@
                                 <ul>
                                     <li ng-repeat="users in usersData">
                                         <p>{{users.username}}</p>
-                                        <input type="checkbox" value="{{users.username}}" ng-model="user.username"/>
+                                        <input type="checkbox" checklist-model="users.username" checklist-value="users.username" />
                                     </li>
                                 </ul>
                             </div>
@@ -121,16 +121,48 @@
                     </select>
                     <button id="submit2" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
                 </div>
-
             </div>
 
             <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{users.usergroup}}</h4>
-                <small>{{users.username}}</small>
+                <h4><i class="fa fa-users" aria-hidden="true"></i>
+{{users.usergroup}}</h4>
+                <small><i class="fa fa-user" aria-hidden="true"></i>
+{{users.username}}</small>
             </li>
         </ul>
     </section>
+
+
+
+    <label ng-repeat="role in roles">
+        <input type="checkbox" checklist-model="getRoles()" checklist-value="role" ng-change="check(role, checked)"> {{role}}
+    </label>
+
+    <script>
+        var app = angular.module("app", ["checklist-model"]);
+        app.controller('Ctrl1', function ($scope) {
+            $scope.roles = [
+    'guest',
+    'user',
+    'customer',
+    'admin'
+  ];
+            $scope.user = {
+                roles: ['user']
+            };
+            $scope.checkAll = function () {
+                $scope.user.roles = angular.copy($scope.roles);
+            };
+            $scope.uncheckAll = function () {
+                $scope.user.roles = [];
+            };
+            $scope.checkFirst = function () {
+                $scope.user.roles.splice(0, $scope.user.roles.length);
+                $scope.user.roles.push('guest');
+            };
+        });
+    </script>
 </body>
 
 <script src="js/script.js"></script>

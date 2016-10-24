@@ -31,7 +31,6 @@
         margin: 50px auto;
         margin-bottom: 75px;
         overflow-y: scroll;
-        
         li {
             display: inline-block;
             color: $color-general;
@@ -55,16 +54,18 @@
                 width: 100%;
                 font-size: 1em;
                 color: $color-general;
-                background-color: $color-white; 
+                background-color: $color-white;
             }
-            small {    
+            small {
                 color: $color-general;
-            padding: 5px;
+                padding: 5px;
                 font-weight: bolder;
-                font-size: 0.9em;
-                background-color: $color-white; 
+                font-size: 0.8em;
+                background-color: $color-white;
                 text-transform: lowercase;
                 width: 75%;
+                margin-right: 5px;
+                margin-bottom: 10px;
             }
             div {
                 margin-top: 15px;
@@ -78,20 +79,45 @@
                     color: $color-general;
                 }
             }
+            h4,
+            small,
+            p,
+            {
+                i {
+                    color: $color-general !important;
+                    margin-right: 10px;
+                    margin-left: 5px;
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                    cursor: default !important;
+                    margin-bottom: 10px;
+                }
+            }
+            p {
+                text-transform: lowercase;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-left: 10px;
+                width: 100%;
+                font-size: .8em;
+                color: $color-general;
+                background-color: $color-white;
+                margin-top: 7px;
+                font-weight: bolder;
+            }
         }
     }
 }
 
 .dropdown {
- text-transform: uppercase;
-        display: block;
-        width: 295px;
-        margin: 10px auto 20px auto;
-        border: 1px solid $color-red;
-        padding: 10px 10px 10px 15px;
-        text-transform: lowercase;
-        background-color: $color-white;
-    
+    text-transform: uppercase;
+    display: block;
+    width: 295px;
+    margin: 10px auto 20px auto;
+    border: 1px solid $color-red;
+    padding: 10px 10px 10px 15px;
+    text-transform: lowercase;
+    background-color: $color-white;
     dd {
         div {
             ul {
@@ -105,18 +131,15 @@
                     background-color: red;
                     border: 1px solid white;
                     color: white;
-                    
                     &:hover {
                         transform: rotate(0deg);
                     }
-                    
                     p {
-/*
+                        /*
                         display: inline-block;
 */
                         color: blue;
                     }
-                    
                     input {
                         display: inline-block;
                     }

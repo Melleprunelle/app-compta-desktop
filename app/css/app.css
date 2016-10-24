@@ -63,6 +63,10 @@ input {
   text-transform: lowercase;
   background-color: transparent; }
 
+.button-accueil {
+  display: block;
+  margin-right: 20px; }
+
 button {
   width: 295px;
   border: none;
@@ -336,10 +340,12 @@ li > p {
         color: #333;
         padding: 5px;
         font-weight: bolder;
-        font-size: 0.9em;
+        font-size: 0.8em;
         background-color: ghostwhite;
         text-transform: lowercase;
-        width: 75%; }
+        width: 75%;
+        margin-right: 5px;
+        margin-bottom: 10px; }
       .section-user ul li div {
         margin-top: 15px;
         margin-bottom: 5px; }
@@ -349,6 +355,27 @@ li > p {
         cursor: pointer; }
         .section-user ul li i:hover {
           color: #333; }
+      .section-user ul li h4 i,
+      .section-user ul li small i,
+      .section-user ul li p i {
+        color: #333 !important;
+        margin-right: 10px;
+        margin-left: 5px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        cursor: default !important;
+        margin-bottom: 10px; }
+      .section-user ul li p {
+        text-transform: lowercase;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 100%;
+        font-size: .8em;
+        color: #333;
+        background-color: ghostwhite;
+        margin-top: 7px;
+        font-weight: bolder; }
 
 .dropdown {
   text-transform: uppercase;
@@ -373,9 +400,9 @@ li > p {
       .dropdown dd div ul li:hover {
         transform: rotate(0deg); }
       .dropdown dd div ul li p {
-        /*
-                                display: inline-block;
-        */
+                        /*
+                        display: inline-block;
+*/
         color: blue; }
       .dropdown dd div ul li input {
         display: inline-block; }

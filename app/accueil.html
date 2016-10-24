@@ -34,46 +34,46 @@
                 </a>
             </div>
             <div class="tooltip">
-                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-                    <span class="tooltiptext">Déconnexion</span>
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                <span class="tooltiptext">Déconnexion</span>
             </div>
         </section>
     </nav>
 
-    <section class="section-index" ng-controller="resumController">
+    <section class="section-user" ng-controller="usersCtrl">
         <img src="img/piggy-bank.svg" alt="">
         <div class="separator"></div>
         <h1>Welcome {{name}}</h1>
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
-        
+
         <ul>
-           <input type="text" placeholder="Rechercher un résumé" ng-model="resum">
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:resum">
+            <input class="button-accueil" type="text" placeholder="Rechercher un résumé" ng-model="resum">
+            <li id="{{users.Id}}" ng-repeat="users in usersData | filter:resum" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{resum.usergroup}}</h4>
-                <small>{{resum.montant}}</small>
-                <h4>{{resum.payeur}}</h4>
-                <small>{{resum.concernes}} - {{resum.nbConcernes}}</small>
-                <p>{{resum.description}}</p>
+                <h4>
+                    <i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}
+                </h4>
+                <h4>
+                    <i class="fa fa-bolt" aria-hidden="true"></i>{{users.username}}
+                </h4>
+                <small>{{users.Montant}}</small>
             </li>
         </ul>
 
 
         <ul>
-           <input type="text" placeholder="Rechercher un utilisateur" ng-model="user">
-            <li id="{{user.username}}" ng-repeat="resum in resums | filter:user">
+            <input class="button-accueil" type="text" placeholder="Rechercher un utilisateur" ng-model="users">
+            <li id="{{user.id}}" ng-repeat="users in usersData | filter:users" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{resum.payeur}}</h4>
+                <h4><i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</h4>
                 <div class="tax">
-                    <p>{{resum.montant}}</p>
-                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    <p>{{users.Montant}}</p>
                 </div>
 
                 <div class="no-tax">
-                    <p>{{resum.montant}}</p>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <p>{{users.Montant}}</p>
                 </div>
-            </li>           
+            </li>
         </ul>
     </section>
 </body>

@@ -59,8 +59,9 @@
                 <div class="modal-content" ng-controller="userFormController">
                     <span class="close" id="close1">×</span>
                     <h4>Ajouter un débiteur</h4>
-                    <input type="text" placeholder="le groupe concerné par la créance" ng-model="user.usergroup"  maxlength="50">
-                    <input type="text" placeholder="date de la créance" ng-model="user.Date"  maxlength="20">
+                    <input type="text" placeholder="le groupe concerné par la créance" ng-model="user.usergroup" maxlength="50">
+                    <input type="text" placeholder="le nom du payeur" ng-model="user.username" maxlength="50">
+                    <input type="text" placeholder="date de la créance" ng-model="user.Date" maxlength="20">
                     <input type="text" placeholder="la créance : ex 150 euros" ng-model="user.Montant" maxlength="15">
                     <select name="usercolor" ng-model="user.usercolor">
                         <option value="">Colors</option>
@@ -77,12 +78,23 @@
 
             <li id="{{users.Id}}" ng-repeat="users in usersData | filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>{{users.usergroup}}</h4>
-                <small>{{users.Date}}</small>
+                <h4>
+                    <i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}
+                </h4>
+                <h4>
+                    <i class="fa fa-bolt" aria-hidden="true"></i>{{users.username}}
+                </h4>
+                <small>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>{{users.Date}}
+                </small>
                 <small>{{users.Montant}}</small>
+                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>
+
+           {{users.Description}}</p>
             </li>
         </ul>
     </section>
+
 </body>
 <script src="js/script.js"></script>
 

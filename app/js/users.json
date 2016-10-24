@@ -4,97 +4,73 @@
          "Id":"67",
          "username":"Erwann",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 06/10"
+         "usercolor":"blue"
       },
       {
-         "Id":"67",
-         "username":"Erwann",
+         "Id":"66",
+         "username":"Eszter",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"blue"
       },
       {
-         "Id":"67",
-         "username":"Erwann",
+         "Id":"82",
+         "username":"Benj",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"red"
       },
       {
-         "Id":"67",
-         "username":"Erwann",
+         "Id":"87",
+         "username":"Momo",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"black"
       },
       {
-         "Id":"67",
-         "username":"Erwann",
+         "Id":"83",
+         "username":"Aurele",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"red"
       },
       {
-         "Id":"67",
-         "username":"Erwann",
+         "Id":"95",
+         "username":"Marc",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"black"
       },
       {
-         "Id":"67",
-         "username":"Erwann",
+         "Id":"97",
+         "username":"Jo",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"green"
       },
       {
-        "Id":"67",
-         "username":"Erwann",
+         "Id":"96",
+         "username":"MP",
          "usergroup":"Ete 2016",
-         "usercolor":"#009AB2",
-         "Montant":"500€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "Description":"Soirée du 20 novembre 2016"
+         "usercolor":"black"
+      },
+      {
+         "Id":"103",
+         "username":"Romy",
+         "usergroup":"Ete 2016",
+         "usercolor":"white"
+      },
+      {
+         "Id":"101",
+         "username":"Baka",
+         "usergroup":"Ete 2016",
+         "usercolor":"red"
+      },
+      {
+         "Id":"100",
+         "username":"Bea",
+         "usergroup":"Ete 2016",
+         "usercolor":"green"
+      },
+      {
+         "Id":"102",
+         "username":"Coraline",
+         "usergroup":"Ete 2016",
+         "usercolor":"red"
       }
    ]
 }

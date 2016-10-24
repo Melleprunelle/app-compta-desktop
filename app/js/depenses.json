@@ -2,13 +2,13 @@
    "records":[
       {
          "Id":"273",
-         "Montant":"50€",
-         "Payeur":"Becca",
-         "Concernes":"Erwann, Ange, Lise, Julien",
-         "Date":"12 juin 1991",
-         "nbConcernes":"4",
-         "usergroup":"ExGroupe",
-         "Description":"Soirée du 20 novembre 2016"
+         "Montant":"23",
+         "Payeur":"95",
+         "Concernes":"82,83,103",
+         "Date":"",
+         "nbConcernes":"3",
+         "usergroup":"Ete 2016",
+         "Description":"Tabac"
       },
       {
          "Id":"272",
@@ -27,7 +27,7 @@
          "Concernes":"67",
          "Date":"",
          "nbConcernes":"1",
-         "usergroup":"Ete ddddd",
+         "usergroup":"Ete 2016",
          "Description":"Dette des dernières vacances"
       },
       {

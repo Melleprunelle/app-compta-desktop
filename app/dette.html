@@ -16,7 +16,7 @@
 </head>
 
 <body ng-app="myApp">
-
+<div ng-controller="usersCtrl">
     <nav>
         <section>
             <div class="tooltip">
@@ -49,52 +49,44 @@
         <div class="separator"></div>
         <h1>Welcome {{name}}</h1>
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
-        <ul ng-controller="usersCtrl">
+        <ul ng-controller="usersDepenses">
             <input type="text" placeholder="Rechercher un débiteur">
             <button id="btnAddUsers">Ajouter une créance</button>
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
-                <div class="modal-content" ng-controller="userFormController">
+                <div class="modal-content" ng-controller="userFormController2">
                     <span class="close" id="close1">×</span>
                     <h4>Ajouter un débiteur</h4>
-                    <input type="text" placeholder="le groupe concerné par la créance" ng-model="user.usergroup" maxlength="50">
-                    <input type="text" placeholder="le nom du payeur" ng-model="user.username" maxlength="50">
-                    <input type="text" placeholder="date de la créance" ng-model="user.Date" maxlength="20">
-                    <input type="text" placeholder="la créance : ex 150 euros" ng-model="user.Montant" maxlength="15">
-                    <select name="usercolor" ng-model="user.usercolor">
-                        <option value="">Colors</option>
-                        <option value='#009AB2'>Bleu</option>
-                        <option value='#FF780C'>Orange</option>
-                        <option value='#B20026'>Violet</option>
-                        <option value='#02B250'>Vert</option>
-                        <option value='#222'>Noir</option>
-                    </select>
-                    <button id="submit" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
+                    <!--<input type="text" placeholder="le groupe concerné par la créance" ng-model="depense.usergroup" maxlength="50">-->
+                    <input type="text" placeholder="le nom du payeur" ng-model="depense.username" maxlength="50">
+                    <input type="text" placeholder="date de la créance" ng-model="depense.Date" maxlength="20">
+                    <input type="text" placeholder="la créance : ex 150 euros" ng-model="depense.Payeur" maxlength="15">
+                    <button id="submit" class="submit" type="submit" ng-click="addDepense(depense)">Ajouter</button>
                 </div>
 
             </div>
 
-            <li id="{{users.Id}}" ng-repeat="users in usersData | filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
+            <li id="{{depenses.Id}}" ng-repeat="depenses in depensesData | filter:debiteur">
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
                 <h4>
-                    <i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}
+                    <i class="fa fa-users dette" aria-hidden="true"></i>{{depenses.usergroup}}
                 </h4>
                 <h4>
-                    <i class="fa fa-bolt" aria-hidden="true"></i>{{users.username}}
+                    <i class="fa fa-bolt dette" aria-hidden="true"></i>{{aUsers[depenses.Payeur].username}}
                 </h4>
                 <small>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>{{users.Date}}
+                    <i class="fa fa-calendar dette" aria-hidden="true"></i>{{depenses.Date}}
                 </small>
-                <small>{{users.Montant}}</small>
-                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>
-
-           {{users.Description}}</p>
+                <small>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>
+</small>
+                <p>{{aUsers[depenses.Concernes].username}}</p>
+                <p>{{depenses.Description}}</p>
             </li>
         </ul>
     </section>
-
+</div>
 </body>
 <script src="js/script.js"></script>
 

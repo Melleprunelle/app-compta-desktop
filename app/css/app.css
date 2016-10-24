@@ -68,7 +68,7 @@ input {
   margin-right: 20px; }
 
 button {
-  width: 295px;
+  width: 325px;
   border: none;
   color: ghostwhite;
   padding: 10px 10px 10px 15px;
@@ -315,18 +315,18 @@ li > p {
     overflow-y: scroll; }
     .section-user ul li {
       display: inline-block;
-      color: #333;
+      color: #FF5023;
       width: 30%;
       margin: 1.5%;
       padding: 25px;
       padding-top: 10px;
       list-style: none;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-image: url(../img/t%C3%A9l%C3%A9chargement);
       vertical-align: top;
       /*text-align: center;*/ }
       .section-user ul li:hover {
-        transform: rotate(1deg);
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); }
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        background-image: url(../img/t%C3%A9l%C3%A9chargement3); }
       .section-user ul li h4 {
         text-transform: uppercase;
         padding-right: 5px;
@@ -334,10 +334,10 @@ li > p {
         padding: 5px;
         width: 100%;
         font-size: 1em;
-        color: #333;
+        color: #FF5023;
         background-color: ghostwhite; }
       .section-user ul li small {
-        color: #333;
+        color: #FF5023;
         padding: 5px;
         font-weight: bolder;
         font-size: 0.8em;
@@ -350,7 +350,7 @@ li > p {
         margin-top: 15px;
         margin-bottom: 5px; }
       .section-user ul li i {
-        color: ghostwhite;
+        color: #333;
         margin-bottom: 10px;
         cursor: pointer; }
         .section-user ul li i:hover {
@@ -372,7 +372,7 @@ li > p {
         padding-left: 10px;
         width: 100%;
         font-size: .8em;
-        color: #333;
+        color: #FF5023;
         background-color: ghostwhite;
         margin-top: 7px;
         font-weight: bolder; }

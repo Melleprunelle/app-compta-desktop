@@ -60,23 +60,22 @@
                     <span class="close" id="close1">×</span>
                     <h4>Ajouter un débiteur</h4>
                     <input type="text" placeholder="Nom" ng-model="user.username">
-                    <input type="text" placeholder="Groupe" ng-model="user.usergroup">
                     <select name="usercolor" ng-model="user.usercolor">
                         <option value="">Colors</option>
-                        <option value='#009AB2'>Bleu</option>
-                        <option value='#FF780C'>Orange</option>
-                        <option value='#B20026'>Violet</option>
-                        <option value='#02B250'>Vert</option>
-                        <option value='#222'>Noir</option>
+                        <option value='#009AB2'>Très important</option>
+                        <option value='#FF780C'>Important</option>
+                        <option value='#02B250'>peu important</option>
+                        <option value='#222'>neutre</option>
                     </select>
                     <button id="submit" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
                 </div>
 
             </div>
 
-            <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
+            <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur">
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4><i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</h4>
+                <h4><i style='color:{{users.usercolor}} !important' class="fa fa-circle" aria-hidden="true"></i>
+<i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</h4>
             </li>
         </ul>
 
@@ -110,59 +109,17 @@
                             </div>
                         </dd>
                     </dl>
-
-                    <select name="usercolor" class="col-md-8 col-md-offset-2" ng-model="user.usercolor">
-                        <option value="">Colors</option>
-                        <option value='#009AB2'>Bleu</option>
-                        <option value='#FF780C'>Orange</option>
-                        <option value='#B20026'>Violet</option>
-                        <option value='#02B250'>Vert</option>
-                        <option value='#222'>Noir</option>
-                    </select>
                     <button id="submit2" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
                 </div>
             </div>
 
-            <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
+            <li id="{{depenses.Id}}" ng-repeat="users in usersData |  filter:debiteur">
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4><i class="fa fa-users" aria-hidden="true"></i>
-{{users.usergroup}}</h4>
-                <small><i class="fa fa-user" aria-hidden="true"></i>
-{{users.username}}</small>
+                <h4><i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}</h4>
+                <small><i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</small>
             </li>
         </ul>
     </section>
-
-
-
-    <label ng-repeat="role in roles">
-        <input type="checkbox" checklist-model="getRoles()" checklist-value="role" ng-change="check(role, checked)"> {{role}}
-    </label>
-
-    <script>
-        var app = angular.module("app", ["checklist-model"]);
-        app.controller('Ctrl1', function ($scope) {
-            $scope.roles = [
-    'guest',
-    'user',
-    'customer',
-    'admin'
-  ];
-            $scope.user = {
-                roles: ['user']
-            };
-            $scope.checkAll = function () {
-                $scope.user.roles = angular.copy($scope.roles);
-            };
-            $scope.uncheckAll = function () {
-                $scope.user.roles = [];
-            };
-            $scope.checkFirst = function () {
-                $scope.user.roles.splice(0, $scope.user.roles.length);
-                $scope.user.roles.push('guest');
-            };
-        });
-    </script>
 </body>
 
 <script src="js/script.js"></script>

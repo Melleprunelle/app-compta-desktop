@@ -13,69 +13,82 @@
 </head>
 
 <body ng-app="myApp">
-    <nav>
-        <section>
-            <div class="tooltip">
-                <a href="accueil.html">
-                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-                    <span class="tooltiptext">Accueil</span>
-                </a>
-            </div>
-            <div class="tooltip">
-                <a href="user.html">
-                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                    <span class="tooltiptext">Gérer les utilisateurs</span>
-                </a>
-            </div>
-            <div class="tooltip">
-                <a href="dette.html">
-                    <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
-                    <span class="tooltiptext">Ajouter un gage</span>
-                </a>
-            </div>
-            <div class="tooltip">
-                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-                <span class="tooltiptext">Déconnexion</span>
-            </div>
+    <div ng-controller="usersCtrl">
+
+        <nav>
+            <section>
+                <div class="tooltip">
+                    <a href="accueil.html">
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                        <span class="tooltiptext">Accueil</span>
+                    </a>
+                </div>
+                <div class="tooltip">
+                    <a href="user.html">
+                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <span class="tooltiptext">Gérer les utilisateurs</span>
+                    </a>
+                </div>
+                <div class="tooltip">
+                    <a href="dette.html">
+                        <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
+                        <span class="tooltiptext">Ajouter un gage</span>
+                    </a>
+                </div>
+                <div class="tooltip">
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Déconnexion</span>
+                </div>
+            </section>
+        </nav>
+
+        <section class="section-user" ng-controller="usersDepenses ">
+            <img src="img/piggy-bank.svg" alt="">
+            <div class="separator"></div>
+            <h1>Welcome {{name}}</h1>
+            <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
+
+            <ul>
+                <input class="button-accueil" type="text" placeholder="Rechercher un résumé" ng-model="resum">
+                <li id="{{depenses.Id}}" ng-repeat="depenses in depensesData | filter:resum">
+                    <i class="fa fa-minus-square" aria-hidden="true"></i>
+                    <h4>
+                    <i class="fa fa-users" aria-hidden="true"></i>{{depenses.usergroup}}
+                </h4>
+                    <h4>
+                    
+                    <i class="fa fa-circle" aria-hidden="true" style='color:{{aUsers[depenses.Payeur].usercolor}} !important'></i>
+                    <i class="fa fa-bolt" aria-hidden="true"></i>{{aUsers[depenses.Payeur].username}}
+                </h4>
+
+                    <small>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>
+</small>
+                </li>
+            </ul>
+
+
+            <ul>
+                <input class="button-accueil" type="text" placeholder="Rechercher un utilisateur" ng-model="depenses">
+
+                <li id="{{depenses.id}}" ng-repeat="depenses in depensesData | filter:users">
+                    <i class="fa fa-minus-square" aria-hidden="true"></i>
+                    <h4>
+                    <i class="fa fa-circle" aria-hidden="true" style='color:{{aUsers[depenses.Payeur].usercolor}} !important'></i>
+                <i class="fa fa-user" aria-hidden="true"></i>{{aUsers[depenses.Payeur].username}}</h4>
+                    <div></div>
+                    <div class="tax">
+                        <p>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>
+                        </p>
+                    </div>
+
+                    <div class="no-tax">
+                        <p>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </section>
-    </nav>
-
-    <section class="section-user" ng-controller="usersCtrl">
-        <img src="img/piggy-bank.svg" alt="">
-        <div class="separator"></div>
-        <h1>Welcome {{name}}</h1>
-        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
-
-        <ul>
-            <input class="button-accueil" type="text" placeholder="Rechercher un résumé" ng-model="resum">
-            <li id="{{users.Id}}" ng-repeat="users in usersData | filter:resum" ng-style="CustomStyle" style='background-color:{{users.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4>
-                    <i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}
-                </h4>
-                <h4>
-                    <i class="fa fa-bolt" aria-hidden="true"></i>{{users.username}}
-                </h4>
-                <small>{{users.Montant}}</small>
-            </li>
-        </ul>
-
-
-        <ul>
-            <input class="button-accueil" type="text" placeholder="Rechercher un utilisateur" ng-model="users">
-            <li id="{{user.id}}" ng-repeat="users in usersData | filter:users" style='background-color:{{users.usercolor}}'>
-                <i class="fa fa-minus-square" aria-hidden="true"></i>
-                <h4><i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</h4>
-                <div class="tax">
-                    <p>{{users.Montant}}</p>
-                </div>
-
-                <div class="no-tax">
-                    <p>{{users.Montant}}</p>
-                </div>
-            </li>
-        </ul>
-    </section>
+    </div>
 </body>
 
 </html>

@@ -6,16 +6,40 @@
         height: 40px;
         width: 150px;
         margin: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
         text-transform: uppercase;
         cursor: pointer;
-        
         &:hover {
-            background-color: $color-general;
+            background-color: $color-red;
         }
+    }
+    
+    section {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 70%;
+        
     }
 }
 
-.bouton {
-    width: 345px;
-    margin: -25px auto;
+.separator-vertical {
+    height: 300px;
+    width: 1px;
+    background-color: $color-orange-light;
+    display: inline-block;
+}
+
+.formulaire {
+    
+        input {
+            display: block;
+            width: 300px;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
 }

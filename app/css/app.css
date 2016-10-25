@@ -148,14 +148,31 @@ button {
   height: 40px;
   width: 150px;
   margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
   text-transform: uppercase;
   cursor: pointer; }
   .section-index button:hover {
-    background-color: #333; }
+    background-color: #BB3B19; }
+.section-index section {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 70%; }
 
-.bouton {
-  width: 345px;
-  margin: -25px auto; }
+.separator-vertical {
+  height: 300px;
+  width: 1px;
+  background-color: #FF5023;
+  display: inline-block; }
+
+.formulaire input {
+  display: block;
+  width: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
+  margin-top: 20px; }
 
 .fa-minus-square {
   margin-top: 10px; }

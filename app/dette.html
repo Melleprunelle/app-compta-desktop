@@ -71,9 +71,10 @@
             <li id="{{depenses.Id}}" ng-repeat="depenses in depensesData | filter:debiteur">
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
                 <h4>
-                    <i class="fa fa-users dette" aria-hidden="true"></i>{{depenses.usergroup}}
+                    <i class="fa fa-users dette" aria-hidden="true"></i> {{aUsers[depenses.usergroup].usergroup}}
                 </h4>
                 <h4>
+                    <i class="fa fa-circle" aria-hidden="true" style='color:{{aUsers[depenses.Payeur].usercolor}} !important'></i>
                     <i class="fa fa-bolt dette" aria-hidden="true"></i>{{aUsers[depenses.Payeur].username}}
                 </h4>
                 <small>

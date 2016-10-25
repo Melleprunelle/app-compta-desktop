@@ -101,10 +101,19 @@
                         <dd>
                             <div class="mutliSelect">
                                 <ul>
-                                    <li ng-repeat="users in usersData">
-                                        <p>{{users.username}}</p>
-                                        <input type="checkbox" checklist-model="users.username" checklist-value="users.username" />
-                                    </li>
+                                    <div ng-repeat="users in usersData">
+                                        <div>
+                                            <input id="{{users.username}}" type="checkbox" value="{{users.username}}" ng-checked="selection.indexOf(users.username) > -1" ng-click="Selection(users.username)" />
+                                            <label for="{{users.username}}"></label>
+                                            {{users.username}}
+                                        </div>
+                                    </div>
+                                    <!--<li ng-repeat="users in usersData">
+                                        <input id="{{users.username}}" type="checkbox" value="users.username" ng-checked="selection.indexOf(users.username) > -1" ng-click="toggleSelection(users.username)" />
+                                        <label for="{{employee.name}}"></label>
+                                        {{users.username}}
+
+                                    </li>-->
                                 </ul>
                             </div>
                         </dd>
@@ -116,7 +125,11 @@
             <li id="{{depenses.Id}}" ng-repeat="users in usersData |  filter:debiteur">
                 <i class="fa fa-minus-square" aria-hidden="true"></i>
                 <h4><i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}</h4>
-                <small><i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</small>
+                <small><i class="fa fa-user" aria-hidden="true"></i>
+        		<small ng-repeat="username in selection" class="selected-item">
+            		{{username}}
+		        </small>
+                </small>
             </li>
         </ul>
     </section>

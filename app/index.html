@@ -12,7 +12,7 @@
 
 
 <body ng-app="myApp">
-   <nav>
+    <nav>
         <section>
             <div class="tooltip">
                 <a href="accueil.html">
@@ -33,26 +33,33 @@
                 </a>
             </div>
             <div class="tooltip">
-                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-                    <span class="tooltiptext">Déconnexion</span>
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                <span class="tooltiptext">Déconnexion</span>
             </div>
         </section>
     </nav>
-    
-    
-     <section class="section-index">
+
+
+    <section class="section-index">
         <img src="img/piggy-bank.svg" alt="">
         <div class="separator"></div>
         <h1>Welcome to No Liability</h1>
         <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Par le biais de cette application vous pourrez gérer votre carnet de créances entre amis et éviter les conflits inutiles.</h3>
-        <div class="bouton">
-        <button type="submit">Subscribe</button>
-        <div class="inscription">
-            
+        
+        <section>
+        <div class="formulaire">
+            <button type="submit">Subscribe</button>
+            <input type="text" placeholder="pseudo">
+            <input type="text" placeholder="password">
+            <input type="text" placeholder="mail">
         </div>
-        <button type="submit">Login</button>
+        <div class="separator-vertical"></div>
+        <div class="formulaire">
+            <button type="submit">Login</button>
+            <input type="text" placeholder="pseudo">
+            <input type="text" placeholder="password">
         </div>
-       
+        </section>
     </section>
-    
+
 </body>

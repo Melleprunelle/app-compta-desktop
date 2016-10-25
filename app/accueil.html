@@ -53,7 +53,8 @@
                 <li id="{{depenses.Id}}" ng-repeat="depenses in depensesData | filter:resum">
                     <i class="fa fa-minus-square" aria-hidden="true"></i>
                     <h4>
-                    <i class="fa fa-users" aria-hidden="true"></i>{{depenses.usergroup}}
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    {{aUsers[depenses.usergroup].usergroup}}
                 </h4>
                     <h4>
                     

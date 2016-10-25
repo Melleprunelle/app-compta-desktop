@@ -54,12 +54,12 @@
                     <i class="fa fa-minus-square" aria-hidden="true"></i>
                     <h4>
                     <i class="fa fa-users" aria-hidden="true"></i>
-                    {{aUsers[depenses.usergroup].usergroup}}
+                    {{bUsers[depenses.usergroup].usergroup}}
                 </h4>
                     <h4>
                     
-                    <i class="fa fa-circle" aria-hidden="true" style='color:{{aUsers[depenses.Payeur].usercolor}} !important'></i>
-                    <i class="fa fa-bolt" aria-hidden="true"></i>{{aUsers[depenses.Payeur].username}}
+                    <i class="fa fa-circle" aria-hidden="true" style='color:{{bUsers[depenses.Payeur].usercolor}} !important'></i>
+                    <i class="fa fa-bolt" aria-hidden="true"></i>{{bUsers[depenses.Payeur].username}}
                 </h4>
 
                     <small>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>
@@ -74,8 +74,8 @@
                 <li id="{{depenses.id}}" ng-repeat="depenses in depensesData | filter:users">
                     <i class="fa fa-minus-square" aria-hidden="true"></i>
                     <h4>
-                    <i class="fa fa-circle" aria-hidden="true" style='color:{{aUsers[depenses.Payeur].usercolor}} !important'></i>
-                <i class="fa fa-user" aria-hidden="true"></i>{{aUsers[depenses.Payeur].username}}</h4>
+                    <i class="fa fa-circle" aria-hidden="true" style='color:{{bUsers[depenses.Payeur].usercolor}} !important'></i>
+                <i class="fa fa-user" aria-hidden="true"></i>{{bUsers[depenses.Payeur].username}}</h4>
                     <div></div>
                     <div class="tax">
                         <p>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>

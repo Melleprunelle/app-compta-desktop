@@ -1,0 +1,46 @@
+.section-index {
+        width: 94.6%;
+    button {
+        color: $color-white;
+        background-color: $color-orange-light;
+        border: none;
+        height: 40px;
+        width: 150px;
+        margin: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-red;
+        }
+    }
+    
+    section {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 70%;
+        
+    }
+}
+
+.separator-vertical {
+    height: 300px;
+    width: 1px;
+    background-color: $color-orange-light;
+    display: inline-block;
+}
+
+.formulaire {
+    
+        input {
+            display: block;
+            width: 300px;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+}

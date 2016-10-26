@@ -1,0 +1,195 @@
+/*Color div*/
+
+$color-pink-light: #FFB9A7;
+$color-pink: #FF967B;
+$color-orange-light: #FF5023;
+$color-red: #BB3B19;
+$color-white: ghostwhite;
+$color-white-transparence: rgba(255, 255, 255, 0.5);
+$color-gold: #bfa100;
+$color-green: yellowgreen;
+
+/*Color typo*/
+
+$color-general: #333;
+$color-secondaire: #444;
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'), url('../fonts/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ==================================================
+    include  
+    ================================================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "open_sansregular";
+    color: $color-general;
+    background-image: url(../img/symphony.png);
+}
+
+nav {
+    height: 100%;
+    width: 5%;
+    background-color: transparent;
+    display: inline-block;
+    section {
+        margin-top: 50px;
+        margin-left: 4%;
+        margin-right: 4%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    i {
+        color: $color-orange-light;
+        font-size: 1.5em !important;
+        margin-top: 20px;
+        cursor: pointer;
+        &:hover {
+            color: $color-general;
+        }
+    }
+}
+
+input {
+    width: 32%;
+    margin-left: 15px;
+    border: 1px solid $color-red;
+    padding: 10px 10px 10px 15px;
+    text-transform: lowercase;
+    background-color: transparent;
+}
+
+.button-accueil {
+    display: inherit;
+    margin-right: 20px;
+}
+
+button {
+    width: 325px;
+    border: none;
+    color: $color-white;
+    padding: 10px 10px 10px 15px;
+    text-transform: uppercase;
+    background-color: $color-red;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    &:hover {
+        background-color: $color-orange-light;
+    }
+}
+
+// MODAL
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    input {
+        display: block;
+        margin: 10px auto;
+        margin-bottom: 15px;
+        width: 295px;
+        text-transform: lowercase;
+    }
+    h4 {
+        width: 50%;
+        color: $color-orange-light;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    select {
+        text-transform: uppercase;
+        display: block;
+        width: 295px;
+        margin: 10px auto 20px auto;
+        border: 1px solid $color-red;
+        padding: 10px 10px 10px 15px;
+        text-transform: lowercase;
+        background-color: $color-white;
+    }
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-image: url(../img/symphony.png);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: $color-general;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: $color-orange-light;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@import "index.scss";
+@import "accueil.scss";
+@import "user.scss";
+@import "dette.scss";
+@import "mediaquery.scss";

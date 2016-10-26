@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "id": "1",
+            "namegroup": "Groupe1"
+      },
+        {
+            "id": "2",
+            "namegroup": "Groupe2"
+      },
+        {
+            "id": "3",
+            "namegroup": "Groupe3"
+      },
+        {
+            "id": "4",
+            "namegroup": "Groupe4"
+      },
+        {
+            "id": "5",
+            "namegroup": "Groupe5"
+      }
+   ]
+}

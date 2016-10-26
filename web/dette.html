@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>No Liability</title>
+    <link rel="icon" href="img/money.svg" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <link rel="stylesheet" href="fonts/font-awesome.css" />
+</head>
+
+<body ng-app="myApp">
+<div ng-controller="usersCtrl">
+    <nav>
+        <section>
+            <div class="tooltip">
+                <a href="accueil.html">
+                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Accueil</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="user.html">
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Gérer les utilisateurs</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="dette.html">
+                    <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Ajouter un gage</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                <span class="tooltiptext">Déconnexion</span>
+            </div>
+        </section>
+    </nav>
+
+    <section class="section-user">
+        <img src="img/piggy-bank.svg" alt="">
+        <div class="separator"></div>
+        <h1>Welcome {{name}}</h1>
+        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos créances.</h3>
+        <ul ng-controller="usersDepenses">
+            <input type="text" placeholder="Rechercher un débiteur">
+            <button id="btnAddUsers">Ajouter une créance</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" ng-controller="userFormController2">
+                    <span class="close" id="close1">×</span>
+                    <h4>Ajouter un débiteur</h4>
+                    <!--<input type="text" placeholder="le groupe concerné par la créance" ng-model="depense.usergroup" maxlength="50">-->
+                    <input type="text" placeholder="le nom du payeur" ng-model="depense.username" maxlength="50">
+                    <input type="text" placeholder="date de la créance" ng-model="depense.Date" maxlength="20">
+                    <input type="text" placeholder="la créance : ex 150 euros" ng-model="depense.Payeur" maxlength="15">
+                    <button id="submit" class="submit" type="submit" ng-click="addDepense(depense)">Ajouter</button>
+                </div>
+
+            </div>
+
+            <li id="{{depenses.Id}}" ng-repeat="depenses in depensesData | filter:debiteur">
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4>
+                    <i class="fa fa-users dette" aria-hidden="true"></i> {{bUsers[depenses.usergroup].usergroup}}
+                </h4>
+                <h4>
+                    <i class="fa fa-circle" aria-hidden="true" style='color:{{bUsers[depenses.Payeur].usercolor}} !important'></i>
+                    <i class="fa fa-bolt dette" aria-hidden="true"></i>{{bUsers[depenses.Payeur].username}}
+                </h4>
+                <small>
+                    <i class="fa fa-calendar dette" aria-hidden="true"></i>{{depenses.Date}}
+                </small>
+                <small>{{depenses.Montant}} <i class="fa fa-eur" aria-hidden="true"></i>
+</small>
+                <p>{{aConcernesFinal[depenses.Id]}}</p>
+                <p>{{depenses.Description}}</p>
+            </li>
+        </ul>
+    </section>
+</div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

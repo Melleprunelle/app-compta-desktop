@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>No Liability</title>
+    <link rel="icon" href="img/money.svg" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <link rel="stylesheet" href="fonts/font-awesome.css" />
+</head>
+
+<body ng-app="myApp">
+
+    <nav>
+        <section>
+            <div class="tooltip">
+                <a href="accueil.html">
+                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Accueil</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="user.html">
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Gérer les utilisateurs</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <a href="dette.html">
+                    <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
+                    <span class="tooltiptext">Ajouter un gage</span>
+                </a>
+            </div>
+            <div class="tooltip">
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                <span class="tooltiptext">Déconnexion</span>
+            </div>
+        </section>
+    </nav>
+
+    <section class="section-user">
+        <img src="img/piggy-bank.svg" alt="">
+        <div class="separator"></div>
+        <h1>Welcome {{name}}</h1>
+        <h3>Bienvenue sur votre interface de comptabilité "No Liability". Les bons comptes font les bons amis. Vous pourrez dans cette interface gérer vos débiteurs et vos groupes.</h3>
+        <ul ng-controller="usersCtrl">
+            <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
+            <button id="btnAddUsers">Ajouter un débiteur</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" ng-controller="userFormController">
+                    <span class="close" id="close1">×</span>
+                    <h4>Ajouter un débiteur</h4>
+                    <input type="text" placeholder="Nom" ng-model="user.username">
+                    <select name="usercolor" ng-model="user.usercolor">
+                        <option value="">Colors</option>
+                        <option value='#009AB2'>Très important</option>
+                        <option value='#FF780C'>Important</option>
+                        <option value='#02B250'>peu important</option>
+                        <option value='#222'>neutre</option>
+                    </select>
+                    <button id="submit" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
+                </div>
+
+            </div>
+
+            <li id="{{users.Id}}" ng-repeat="users in usersData |  filter:debiteur">
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4><i style='color:{{users.usercolor}} !important' class="fa fa-circle" aria-hidden="true"></i>
+<i class="fa fa-user" aria-hidden="true"></i>{{users.username}}</h4>
+            </li>
+        </ul>
+
+
+        <ul ng-controller="usersCtrl">
+            <input type="text" placeholder="Rechercher un débiteur" ng-model="debiteur">
+            <button type="submit" id="btnAddGroups">Ajouter un groupe</button>
+            <!-- The Modal -->
+            <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" ng-controller="userFormController">
+                    <span class="close" id="close2">×</span>
+                    <h4>Ajouter un groupe</h4>
+                    <input type="text" placeholder="Groupe" ng-model="user.usergroup">
+
+                    <dl class="dropdown">
+                        <dt>
+                        <a href="#">
+                          <span>Débiteurs</span>      
+                        </a>
+                        </dt>
+                        <dd>
+                            <div class="mutliSelect">
+                                <ul>
+                                    <div ng-repeat="users in usersData">
+                                        <div>
+                                            <input id="{{users.username}}" type="checkbox" value="{{users.username}}" ng-checked="selection.indexOf(users.username) > -1" ng-click="Selection(users.username)" />
+                                            <label for="{{users.username}}"></label>
+                                            {{users.username}}
+                                        </div>
+                                    </div>
+                                    <!--<li ng-repeat="users in usersData">
+                                        <input id="{{users.username}}" type="checkbox" value="users.username" ng-checked="selection.indexOf(users.username) > -1" ng-click="toggleSelection(users.username)" />
+                                        <label for="{{employee.name}}"></label>
+                                        {{users.username}}
+
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <button id="submit2" class="submit" type="submit" ng-click="addUser(user)">Ajouter</button>
+                </div>
+            </div>
+
+            <li id="{{depenses.Id}}" ng-repeat="users in usersData |  filter:debiteur">
+                <i class="fa fa-minus-square" aria-hidden="true"></i>
+                <h4><i class="fa fa-users" aria-hidden="true"></i>{{users.usergroup}}</h4>
+                <small><i class="fa fa-user" aria-hidden="true"></i>
+        		<small ng-repeat="username in selection" class="selected-item">
+            		{{username}}
+		        </small>
+                </small>
+            </li>
+        </ul>
+    </section>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

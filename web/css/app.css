@@ -1,0 +1,446 @@
+/*Color div*/
+/*Color typo*/
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("../fonts/opensans-light-webfont.woff2") format("woff2"), url("../fonts/opensans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url("../fonts/opensans-semibold-webfont.woff2") format("woff2"), url("../fonts/opensans-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* ==================================================
+    include  
+    ================================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  font-family: "open_sansregular";
+  color: #333;
+  background-image: url(../img/symphony.png); }
+
+nav {
+  height: 100%;
+  width: 5%;
+  background-color: transparent;
+  display: inline-block; }
+  nav section {
+    margin-top: 50px;
+    margin-left: 4%;
+    margin-right: 4%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  nav i {
+    color: #FF5023;
+    font-size: 1.5em !important;
+    margin-top: 20px;
+    cursor: pointer; }
+    nav i:hover {
+      color: #333; }
+
+input {
+  width: 32%;
+  margin-left: 15px;
+  border: 1px solid #BB3B19;
+  padding: 10px 10px 10px 15px;
+  text-transform: lowercase;
+  background-color: transparent; }
+
+.button-accueil {
+  display: inherit;
+  margin-right: 20px; }
+
+button {
+  width: 325px;
+  border: none;
+  color: ghostwhite;
+  padding: 10px 10px 10px 15px;
+  text-transform: uppercase;
+  background-color: #BB3B19;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px; }
+  button:hover {
+    background-color: #FF5023; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .modal input {
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 15px;
+    width: 295px;
+    text-transform: lowercase; }
+  .modal h4 {
+    width: 50%;
+    color: #FF5023;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  .modal select {
+    text-transform: uppercase;
+    display: block;
+    width: 295px;
+    margin: 10px auto 20px auto;
+    border: 1px solid #BB3B19;
+    padding: 10px 10px 10px 15px;
+    text-transform: lowercase;
+    background-color: ghostwhite; }
+  .modal button {
+    display: block;
+    margin: 10px auto; }
+
+/* Modal Content */
+.modal-content {
+  background-image: url(../img/symphony.png);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; }
+
+/* The Close Button */
+.close {
+  color: #333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #FF5023;
+  text-decoration: none;
+  cursor: pointer; }
+
+.section-index {
+  width: 94.6%; }
+  .section-index button {
+    color: ghostwhite;
+    background-color: #FF5023;
+    border: none;
+    height: 40px;
+    width: 150px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .section-index button:hover {
+      background-color: #BB3B19; }
+  .section-index section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 70%; }
+
+.separator-vertical {
+  height: 300px;
+  width: 1px;
+  background-color: #FF5023;
+  display: inline-block; }
+
+.formulaire input {
+  display: block;
+  width: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
+  margin-top: 20px; }
+
+.fa-minus-square {
+  margin-top: 10px; }
+
+.tooltip {
+  position: relative;
+  display: inline-block; }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 0.8em;
+  width: 150px;
+  background-color: #333;
+  color: ghostwhite;
+  text-align: center;
+  padding: 5px;
+  margin-left: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1; }
+
+.tooltip:hover .tooltiptext {
+  visibility: visible; }
+
+.separator {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-top: 3px solid #FF5023; }
+
+.section-index {
+  display: inline-block;
+  margin: 75px auto;
+  width: 89.5%;
+  height: 900px;
+  vertical-align: top; }
+  .section-index h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    text-transform: uppercase; }
+  .section-index h3 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: "open_sanslight";
+    width: 65%;
+    text-transform: lowercase; }
+  .section-index h4 {
+    text-transform: uppercase;
+    padding-right: 5px;
+    margin-top: 3px;
+    font-size: 1em;
+    color: #BB3B19; }
+  .section-index img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto; }
+  .section-index ul {
+    height: 600px;
+    width: 80%;
+    margin: 50px auto;
+    margin-bottom: 75px;
+    overflow-y: scroll; }
+    .section-index ul li {
+      display: inline-block;
+      color: #333;
+      width: 30%;
+      margin: 1.5%;
+      padding: 25px;
+      list-style: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid #FF5023;
+      vertical-align: top; }
+      .section-index ul li:hover {
+        transform: rotate(1deg);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); }
+      .section-index ul li small {
+        color: #333;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-weight: bolder;
+        font-size: 0.9em;
+        text-transform: lowercase; }
+      .section-index ul li div {
+        margin-top: 15px;
+        margin-bottom: 5px; }
+      .section-index ul li i {
+        color: #FF5023;
+        margin-bottom: 10px;
+        cursor: pointer; }
+        .section-index ul li i:hover {
+          color: #333; }
+
+li > p {
+  color: #BB3B19;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.tax {
+  display: inline-block;
+  background-color: yellowgreen;
+  width: 100px;
+  margin-right: 20px; }
+
+.no-tax {
+  display: inline-block;
+  width: 100px;
+  background-color: #BB3B19; }
+
+.tax p,
+.no-tax p {
+  display: inline-block;
+  padding: 20px 5px 20px 20px;
+  text-align: center;
+  color: ghostwhite;
+  font-weight: bolder; }
+
+.tax i,
+.no-tax i {
+  color: ghostwhite !important;
+  cursor: default !important; }
+
+.section-user {
+  display: inline-block;
+  margin: 100px auto;
+  width: 94.6%;
+  height: 900px;
+  vertical-align: top; }
+  .section-user h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    text-transform: uppercase; }
+  .section-user h3 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: "open_sanslight";
+    width: 65%;
+    text-transform: lowercase; }
+  .section-user img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto; }
+  .section-user ul {
+    height: 700px;
+    width: 80%;
+    margin: 100px auto;
+    margin-bottom: 125px;
+    overflow-y: scroll; }
+    .section-user ul li {
+      display: inline-block;
+      color: #FF5023;
+      width: 30%;
+      margin: 1.5%;
+      padding: 25px;
+      padding-top: 10px;
+      list-style: none;
+      background-image: url(../img/t%C3%A9l%C3%A9chargement);
+      vertical-align: top;
+      /*text-align: center;*/ }
+      .section-user ul li:hover {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        background-image: url(../img/t%C3%A9l%C3%A9chargement3); }
+      .section-user ul li h4 {
+        text-transform: uppercase;
+        padding-right: 5px;
+        margin: 5px 0px 10px;
+        padding: 5px;
+        width: 100%;
+        font-size: 1em;
+        color: #FF5023;
+        background-color: ghostwhite; }
+      .section-user ul li small {
+        color: #FF5023;
+        padding: 5px;
+        font-weight: bolder;
+        font-size: 0.8em;
+        background-color: ghostwhite;
+        text-transform: lowercase;
+        width: 75%;
+        margin-right: 5px;
+        margin-bottom: 10px; }
+      .section-user ul li div {
+        margin-top: 15px;
+        margin-bottom: 5px; }
+      .section-user ul li i {
+        color: #333;
+        margin-bottom: 10px;
+        cursor: pointer; }
+        .section-user ul li i:hover {
+          color: #333; }
+      .section-user ul li h4 i,
+      .section-user ul li small i,
+      .section-user ul li p i {
+        color: #333 !important;
+        margin-right: 10px;
+        margin-left: 5px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        cursor: default !important;
+        margin-bottom: 10px; }
+      .section-user ul li p {
+        text-transform: lowercase;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 100%;
+        font-size: .8em;
+        color: #FF5023;
+        background-color: ghostwhite;
+        margin-top: 7px;
+        font-weight: bolder; }
+
+.dropdown {
+  text-transform: uppercase;
+  display: block;
+  width: 295px;
+  margin: 10px auto 20px auto;
+  border: 1px solid #BB3B19;
+  padding: 10px 10px 10px 15px;
+  text-transform: lowercase;
+  background-color: ghostwhite; }
+  .dropdown dd div ul {
+    width: 100% !important;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    .dropdown dd div ul li {
+      width: 100%;
+      background-color: transparent;
+      display: block;
+      background-color: red;
+      border: 1px solid white;
+      color: white; }
+      .dropdown dd div ul li:hover {
+        transform: rotate(0deg); }
+      .dropdown dd div ul li p {
+                        /*
+                        display: inline-block;
+*/
+        color: blue; }
+      .dropdown dd div ul li input {
+        display: inline-block; }
+
+/* Smartphone */
+@media (max-width: 450px) {
+  nav {
+    position: inherit;
+    height: 70px;
+    width: 100%;
+    background-color: #FF5023;
+    display: inline-block; }
+
+  nav i {
+    color: ghostwhite;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 25%; }
+    nav i:hover {
+      color: #333; } }
+
+/*# sourceMappingURL=app.css.map */
